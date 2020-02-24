@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<etl>
+    <path>1123</path>
+    <columns>
+        <column>
+            <name>salary</name>
+        </column>
+        <column>
+            <name>class</name>
+        </column>
+    </columns>
+</etl>
