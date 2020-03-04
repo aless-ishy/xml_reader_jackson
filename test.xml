@@ -2,11 +2,42 @@
 <etl>
     <path>1123</path>
     <columns>
-        <column>
-            <name>salary</name>
+        <column name="PassengerId" remove="true"/>
+
+        <column name="Pclass" type="categorical">
+            <categories>
+                <cat>1</cat>
+                <cat>2</cat>
+                <cat>3</cat>
+            </categories>
         </column>
-        <column>
-            <name>class</name>
+
+        <column name="Name" remove="true"/>
+
+        <column name="Sex" type="categorical">
+            <categories>
+                <cat>male</cat>
+                <cat>female</cat>
+            </categories>
         </column>
+
+        <column name="Age" type="integer"/>
+
+        <column name="SibSp" type="integer"/>
+
+        <column name="Parch" type="integer"/>
+
+        <column name="Fare" type="real"/>
+
+        <column name="Cabin" remove="true"/>
+
+        <column name="Embarked" type="categorical">
+            <categories>
+                <cat>S</cat>
+                <cat>C</cat>
+                <cat>Q</cat>
+            </categories>
+        </column>
+
     </columns>
 </etl>

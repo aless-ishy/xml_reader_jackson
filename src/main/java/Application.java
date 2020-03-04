@@ -6,10 +6,12 @@ import model.ETL;
 public class Application {
     public static void main(String[] args) {
         File xmlFile = new File("test.xml");
+        ETL etl;
         try{
             XmlMapper mapper = new XmlMapper();
-            ETL etl = mapper.readValue(xmlFile,ETL.class);
+            etl = mapper.readValue(xmlFile,ETL.class);
             System.out.println(etl);
         }catch (Exception e) {e.printStackTrace();}
+
     }
 }
