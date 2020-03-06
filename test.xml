@@ -1,43 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<etl>
-    <path>1123</path>
-    <columns>
-        <column name="PassengerId" remove="true"/>
+<lifeCycle>
+    <etl>
+        <path>titanic/train.csv</path>
+        <columns>
+            <column name="PassengerId" type="integer" remove="true"/>
 
-        <column name="Pclass" type="categorical">
-            <categories>
-                <cat>1</cat>
-                <cat>2</cat>
-                <cat>3</cat>
-            </categories>
-        </column>
+            <column name="Survived" type="integer" remove="true"/>
 
-        <column name="Name" remove="true"/>
+            <column name="Pclass" type="categorical">
+                <categories>
+                    <cat>1</cat>
+                    <cat>2</cat>
+                    <cat>3</cat>
+                </categories>
+            </column>
 
-        <column name="Sex" type="categorical">
-            <categories>
-                <cat>male</cat>
-                <cat>female</cat>
-            </categories>
-        </column>
+            <column name="Name" type="string" remove="true"/>
 
-        <column name="Age" type="integer"/>
+            <column name="Sex" type="categorical">
+                <categories>
+                    <cat>male</cat>
+                    <cat>female</cat>
+                </categories>
+            </column>
 
-        <column name="SibSp" type="integer"/>
+            <column name="Age" type="integer"/>
 
-        <column name="Parch" type="integer"/>
+            <column name="SibSp" type="integer"/>
 
-        <column name="Fare" type="real"/>
+            <column name="Parch" type="integer"/>
 
-        <column name="Cabin" remove="true"/>
+            <column name="Ticket" type="string" remove="true"/>
 
-        <column name="Embarked" type="categorical">
-            <categories>
-                <cat>S</cat>
-                <cat>C</cat>
-                <cat>Q</cat>
-            </categories>
-        </column>
+            <column name="Fare" type="real"/>
 
-    </columns>
-</etl>
+            <column name="Cabin" type="string" remove="true"/>
+
+            <column name="Embarked" type="categorical">
+                <categories>
+                    <cat>S</cat>
+                    <cat>C</cat>
+                    <cat>Q</cat>
+                </categories>
+            </column>
+
+        </columns>
+    </etl>
+    <train path="titanic/train.csv">
+    </train>
+</lifeCycle>
